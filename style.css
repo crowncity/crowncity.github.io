@@ -1799,7 +1799,7 @@ footer{
 .copyright p:hover::after{
     width: 100%;
 }
-.copyright p { width: 120%;}
+.copyright p { width: 100%;}
 @keyframes up-Down{
     0%{
         transform: translateY(0);
