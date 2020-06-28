@@ -43,6 +43,30 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v7.0'
+		});
+	  };
+
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="104655684582422"
+theme_color="#ffc300">
+	</div>
 	<!-- ======================================
 	        ==   Start Header area  ==
 	====================================== -->
@@ -66,109 +90,22 @@
 									<li class="mega">
 										<a href="import01.html">Import<i class="ion-chevron-down icon_down"></i></a>
 										<div class="mega_menu">
-											<div class="food catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Food products</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="import01.html"><i class="ion-arrow-right-c"></i>Beverages</a></li> -->
-												</ul>
-											</div>
-											<div class="electronics catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Electronics</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="import02.html"><i class="ion-arrow-right-c"></i>Notebooks & Laptops</a></li> -->
-												</ul>
-											</div>
-											<div class="industrial catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Industrial</h5>
-													</div>
-												</div>
+											<!-- <div class="industrial catg"> -->
 												<ul class="category_menu">
 													<li><a href="import01.html"><i class="ion-arrow-right-c"></i>GI Hollow Pipe</a></li>
 												</ul>
-											</div>										
+																				
 										</div>
 									</li>
 									<li class="mega">
 										<a href="export01.html">Export<i class="ion-chevron-down icon_down"></i></a>
 										<div class="mega_menu">
 											<div class="food catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Food products</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<li><a href="export01.html"><i class="ion-arrow-right-c"></i>Marine & Argo Products</a></li>
+												<ul class="category_menu" style="left: 70%; !important">
+													<li><a href="export01.html"><i class="ion-arrow-right-c"></i>Marine Products</a></li>
+													<li><a href="export02.html"><i class="ion-arrow-right-c"></i>Agricultural Products</a></li>
 												</ul>
 											</div>
-											<div class="electronics catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Electronics</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export02.html"><i class="ion-arrow-right-c"></i>Notebooks & Laptops</a></li> -->
-												</ul>
-											</div>
-											<div class="industrial catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Industrial</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export03.html"><i class="ion-arrow-right-c"></i>Motor Parts</a></li> -->
-												</ul>
-											</div>										
-											<div class="household catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Household</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export04.html"><i class="ion-arrow-right-c"></i>Air Conditioning</a></li> -->
-												</ul>
-											</div>								
 										</div>
 									</li>
 									<li><a href="contact.html">Contact</a></li>
@@ -200,7 +137,7 @@
 									<a href="import01.html">Import</a>
 									<ul>
 										<li>
-											<a href="import01.html">Industrial</a>
+											<a href="import01.html">GI Hollow Pipe</a>
 										</li>
 									</ul>
 								</li>
@@ -208,7 +145,8 @@
 									<a href="export01.html">Export</a>
 									<ul>
 										<li>
-											<a href="export01.html">Food Products</a>
+											<a href="export01.html">Marine Products</a>
+											<a href="export02.html">Agricultural Products</a>
 										</li>
 									</ul>
 								</li>
@@ -243,9 +181,8 @@
 							<div class="main_slider_table">
 								<div class="main_slider_cell">
 									<div class="main_slider_info">
-										<h5 style="color: green;">Welcome to Crown City Co.,Ltd </h5>
-										<!-- <h1>An International Buyer</h1> -->
-										<h2 style="color: green;">Build Your Business With Us</h2>						
+										<h5 style="color: wheat;background-color: gray;width: fit-content;">Welcome to Crown City Co.,Ltd </h5>
+										<h2 style="color: black;background-color: white;width: fit-content;">Build Your Business With Us</h2>						
 										<div class="slider_contact_me btn1">
 											<div class="btn1_main">			
 												<a href="contact.html">Contact Us<i class="ion-ios-arrow-right"></i></a>
@@ -279,9 +216,9 @@
 							<div class="main_slider_table">
 								<div class="main_slider_cell">
 									<div class="main_slider_info">
-										<h5 style="color: gold !important;">We are Crown City Company Limited</h5>
+										<h5 style="color: wheat;background-color: gray;width: fit-content;">We are Crown City Company Limited</h5>
 										<!-- <h1 style="color: antiquewhite;">An International Expoter/ Importer</h1> -->
-										<h2 class="fade_effect" style="color:gold;">Build Your Business With Us</h2>
+										<h2 class="fade_effect" style="color: black;background-color: white;width: fit-content;">Build Your Business With Us</h2>
 										<div class="slider_contact_me btn1">
 											<div class="btn1_main">			
 												<a href="contact.html">Contact Us<i class="ion-ios-arrow-right"></i></a>
@@ -316,9 +253,9 @@
 							<div class="main_slider_table">
 								<div class="main_slider_cell">
 									<div class="main_slider_info">
-										<h5 style="color: red;">Welcome to Crown City Co.,Ltd </h5>
+										<h5 style="color: wheat;background-color: gray;width: fit-content;">Welcome to Crown City Co.,Ltd </h5>
 										<!-- <h1>An International Buyer</h1> -->
-										<h2 class="fade_effect"  style="color: red;">Build Your Business With Us</h2>
+										<h2 class="fade_effect"  style="color: black;background-color: white;width: fit-content;">Build Your Business With Us</h2>
 										<div class="slider_contact_me btn1">
 											<div class="btn1_main">			
 												<a href="contact.html">Contact Us<i class="ion-ios-arrow-right"></i></a>
@@ -373,10 +310,9 @@
 				<div class="col-sm-5">
 					<div class="exp_info">
 						<article class="experience_info">
-							<h3>Welcome to Crown City Co.,Ltd </h3>
-							<h2>We Export Best Quality Products For Your Business.</h2>
+							<h2>Welcome to Crown City Co.,Ltd </h3>
 							<div class="experience_desc">
-								<p> Crown City  is one of the Myanmar's leading company of exporting organic agricultural products and marine products ,origin of myanmar to all 
+								<p> City  is one of the Myanmar's leading company of exporting organic agricultural products and marine products ,origin of myanmar to all 
 									around the world.We are always cutomer focused and will deliver what the cutomer needs in terms of value , quality and satisfaction.</p>
 							</div>
 							<div class="read_more btn1">

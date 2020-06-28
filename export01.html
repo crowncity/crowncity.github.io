@@ -43,9 +43,34 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v7.0'
+		});
+	  };
+
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="104655684582422"
+theme_color="#ffc300">
+	</div>
 	<!-- ======================================
 	        ==   Start Header area  ==
 	====================================== -->
+	<header>
 		<div class="header_bottom">
 			<div class="container">
 				<div class="row">
@@ -65,116 +90,27 @@
 									<li class="mega">
 										<a href="import01.html">Import<i class="ion-chevron-down icon_down"></i></a>
 										<div class="mega_menu">
-											<div class="food catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Food products</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="import01.html"><i class="ion-arrow-right-c"></i>Beverages</a></li> -->
-												</ul>
-											</div>
-											<div class="electronics catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Electronics</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="import02.html"><i class="ion-arrow-right-c"></i>Notebooks & Laptops</a></li> -->
-												</ul>
-											</div>
-											<div class="industrial catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Industrial</h5>
-													</div>
-												</div>
+											<!-- <div class="industrial catg"> -->
 												<ul class="category_menu">
 													<li><a href="import01.html"><i class="ion-arrow-right-c"></i>GI Hollow Pipe</a></li>
 												</ul>
-											</div>										
+																				
 										</div>
 									</li>
 									<li class="mega">
-										<a href="index.html#">Export<i class="ion-chevron-down icon_down"></i></a>
+										<a href="export01.html">Export<i class="ion-chevron-down icon_down"></i></a>
 										<div class="mega_menu">
 											<div class="food catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Food products</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
+												<ul class="category_menu" style="left: 70%; !important">
 													<li><a href="export01.html"><i class="ion-arrow-right-c"></i>Marine Products</a></li>
-													<li><a href="export01.html"><i class="ion-arrow-right-c"></i>Agricultural Products</a></li>
+													<li><a href="export02.html"><i class="ion-arrow-right-c"></i>Agricultural Products</a></li>
 												</ul>
 											</div>
-											<div class="electronics catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Electronics</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export02.html"><i class="ion-arrow-right-c"></i>Notebooks & Laptops</a></li> -->
-												</ul>
-											</div>
-											<div class="industrial catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Industrial</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export03.html"><i class="ion-arrow-right-c"></i>Motor Parts</a></li> -->
-												</ul>
-											</div>										
-											<div class="household catg">
-												<div class="category_title">
-													<div class="style_div">
-														<div class="div1"></div>
-														<div class="div2"></div>
-													</div>
-													<div class="category_name">
-														<h5>Household</h5>
-													</div>
-												</div>
-												<ul class="category_menu">
-													<!-- <li><a href="export04.html"><i class="ion-arrow-right-c"></i>Air Conditioning</a></li> -->
-												</ul>
-											</div>								
 										</div>
 									</li>
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
-							
 						</div>
 					</div>				
 				</div>			
@@ -186,7 +122,7 @@
 					<div class="col-xs-12">
 						<div class="mobile_mean_logo">
 							<a href="index.html">
-								<img src="images/logo.jpeg" style="max-width: 20% !important;" alt="logo">
+								<img src="images/logo.jpeg" alt="logo" style="max-width: 20% !important;">
 							</a>
 						</div>
 						<div class="mobile_mean_menu">
@@ -201,7 +137,7 @@
 									<a href="import01.html">Import</a>
 									<ul>
 										<li>
-											<a href="import01.html">Industrial</a>
+											<a href="import01.html">GI Hollow Pipe</a>
 										</li>
 									</ul>
 								</li>
@@ -209,7 +145,8 @@
 									<a href="export01.html">Export</a>
 									<ul>
 										<li>
-											<a href="export01.html">Food Products</a>
+											<a href="export01.html">Marine Products</a>
+											<a href="export02.html">Agricultural Products</a>
 										</li>
 									</ul>
 								</li>
@@ -223,6 +160,7 @@
 			</div>
 		</div>	
 	</header>
+
 	<!-- ======================================
 	        ==   End Header area  ==
 	====================================== -->
@@ -270,7 +208,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title_style">
-						<h1>Marine & Argo Products</h1>
+						<h1>Marine Products</h1>
 					</div>
 				</div>
 			</div>
@@ -279,37 +217,19 @@
 					<div class="export_item">
 						<img src="images/all_cat.jpeg" alt="export">
 						<h2>All Category</h2>
-						<div class="export_desc">
-							<!-- <p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p> -->
-						</div>
 					</div>
 				</div>
 				<div class="col-sm-4 col-xs-12">
 					<div class="export_item">
 						<img src="images/hilsa.jpeg" alt="export">
 						<h2>Hilsa</h2>
-						<div class="export_desc">
-							<!-- <p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p> -->
-						</div>
 					</div>
 				</div>
 
 				<div class="col-sm-4 col-xs-12">
 					<div class="export_item">
 						<img src="images/ruhu.jpeg" alt="export">
-						<h2>Water Name</h2>
-						<div class="export_desc">
-							<p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-12">
-					<div class="export_item">
-						<img src="images/katla.jpeg" alt="export">
-						<h2>Katla</h2>
-						<div class="export_desc">
-							<!-- <p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p> -->
-						</div>
+						<h2>Rohu</h2>
 					</div>
 				</div>
 			</div>
@@ -318,41 +238,29 @@
 					<div class="export_item">
 						<img src="images/wet_pomfret.jpeg" alt="export">
 						<h2>White Pomfret</h2>
-						<div class="export_desc">
-							<!-- <p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p> -->
-						</div>
 					</div>
 				</div>
 				<div class="col-sm-4 col-xs-12">
 					<div class="export_item">
 						<img src="images/kural.jpeg" alt="export">
 						<h2>Kural</h2>
-						<div class="export_desc">
-							<!-- <p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p> -->
-						</div>
 					</div>
 				</div>
 				<div class="col-sm-4 col-xs-12">
 					<div class="export_item">
 						<img src="images/dry_suri.jpeg" alt="export">
 						<h2>Dry Suri</h2>
-						<div class="export_desc">
-							<p>Duis autem vel eum iriure dolor in drerit in vulputate velit essc.</p>
-						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <div class="row">
-				<div class="pagination_list">
-					<ul>
-						<li><a href="export01.html#"><i class="ion-arrow-left-c"></i></a></li>		
-						<li><a href="export01.html#">1</a></li>
-						<li><a href="export01.html#">2</a></li>
-						<li><a href="export01.html#">3</a></li>
-						<li><a href="export01.html#"><i class="ion-arrow-right-c"></i></a></li>
-					</ul>
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div class="export_item">
+						<img src="images/katla.jpeg" alt="export">
+						<h2>Katla</h2>
+					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</section>
 	<!-- ======================================
