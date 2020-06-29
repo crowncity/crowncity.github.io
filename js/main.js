@@ -187,7 +187,7 @@ if(location.href.split("/").slice(-1) == ""){
 
      //Google Map
       var googleMapSelector = $('#contactgoogleMap'),
-          myCenter = new google.maps.LatLng(16.789414, 96.164302);
+          myCenter = new google.maps.LatLng(40.715721, -74.000017);
       function initialize() {
           var mapProp = {
            center: myCenter,
