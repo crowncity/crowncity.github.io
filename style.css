@@ -3998,7 +3998,7 @@ label[for="login_check"]{
         margin-top:60px;
     }
     .scroll{
-        right: 15px;
+        right: 80px;
     }
     /* About us html */
     .about_info{
@@ -4033,7 +4033,7 @@ label[for="login_check"]{
         padding: 0 0 10px 0;
     }
     .breadcrumb {
-        padding: 115px 0 0 0;
+        padding: 120px 0 0 0;
     }
     .export_item{
         padding: 20px;
