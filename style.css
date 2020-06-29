@@ -2019,8 +2019,8 @@ footer{
 .export_item{
     border: 1px solid #f3f3f3;
     text-align: center;
-    padding: 45px 55px 40px;
-    margin-bottom: 30px;   
+    padding: 10px 10px 10px;
+    margin-bottom: 20px;   
 }
 .export_item h2{
     font-weight: 700;
